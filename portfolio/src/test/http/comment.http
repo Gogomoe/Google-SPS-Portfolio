@@ -1,0 +1,19 @@
+
+GET {{host}}/comment
+Accept: application/json
+
+###
+
+POST {{host}}/comment
+Content-Type: application/json
+
+{
+  "content": "text comment"
+}
+
+###
+
+DELETE {{host}}/comment/5629499534213120
+Accept: application/json
+
+###

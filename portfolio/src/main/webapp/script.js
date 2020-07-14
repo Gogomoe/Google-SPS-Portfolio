@@ -12,17 +12,38 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/**
- * Adds a random greeting to the page.
- */
-function addRandomGreeting() {
-  const greetings =
-      ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
+async function loadComments() {
+    const result = await (await fetch('/comment', {method: 'GET'})).json()
 
-  // Pick a random greeting.
-  const greeting = greetings[Math.floor(Math.random() * greetings.length)];
+    const commentListElement = document.getElementById('comment-list')
+    commentListElement.innerHTML = ''
 
-  // Add it to the page.
-  const greetingContainer = document.getElementById('greeting-container');
-  greetingContainer.innerText = greeting;
+    result.comments.forEach((comment) => {
+        commentListElement.appendChild(createCommentElement(comment))
+    })
 }
+
+
+function createCommentElement(comment) {
+    const commentElement = document.createElement('div')
+    commentElement.className = 'comment'
+    commentElement.innerText = comment.content
+
+    return commentElement;
+}
+
+function deleteComment(comment) {
+    fetch(`/comment/${comment.id}`, {method: 'DELETE'})
+}
+
+async function submitComment() {
+    const content = document.getElementById('comment-input').value
+
+    await fetch('/comment', {
+        method: 'POST',
+        body: JSON.stringify({content: content})
+    })
+    await loadComments()
+}
+
+document.addEventListener('DOMContentLoaded', loadComments);

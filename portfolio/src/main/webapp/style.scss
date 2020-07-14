@@ -1,0 +1,238 @@
+$primeColor: #428cdd;
+
+@media print {
+
+  body {
+    font-size: 14px !important;
+  }
+
+  .landing {
+    display: none !important;
+  }
+
+  .resume-box {
+    padding: 40px 0 0 !important;
+  }
+
+  .resume, .footer {
+    min-height: 0 !important;
+    width: 90% !important;
+    border: none !important;
+  }
+
+  .profile, .information, .experience {
+    color: black !important;
+    padding: 0.5em 0 !important;
+  }
+
+  .profile img {
+    display: none !important;
+  }
+
+  h1, h2, h3, p, a {
+    break-inside: avoid !important;
+  }
+
+  .on-print {
+    display: block !important;
+  }
+
+}
+
+
+body {
+  margin: 0;
+  font-size: 18px;
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+  background-color: #fefefe;
+}
+
+.ai {
+  font-weight: bold;
+  transform: scale(0.9);
+}
+
+a, a:visited {
+  color: #428cdd;
+}
+
+.landing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  height: 85vh;
+  width: 100%;
+  font-size: 24px;
+  color: white;
+  background-color: $primeColor;
+
+
+  h1 {
+    font-weight: 200;
+  }
+
+  i {
+    color: white;
+    font-size: 2em;
+  }
+}
+
+.content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .link-icons i {
+    margin: 0 0.3em;
+  }
+}
+
+.down-arrow {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.resume-box {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 10vh 0 5vh;
+}
+
+.comment-box {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5vh;
+}
+
+.resume {
+  display: flex;
+  box-sizing: border-box;
+  width: 75%;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: stretch;
+  border: 5px solid $primeColor;
+  padding-bottom: 2em;
+}
+
+.comment-container {
+  display: flex;
+  box-sizing: border-box;
+  width: 75%;
+  flex-direction: column;
+  align-items: stretch;
+  border: 5px solid $primeColor;
+  padding-bottom: 2em;
+}
+
+.comment {
+  margin: 1em 0;
+}
+
+.comment-input-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  margin-top: 2em;
+
+  textarea {
+    min-height: 100px;
+    padding: 0.5em;
+    font-size: 0.9em;
+    outline-color: $primeColor;
+    border-color: $primeColor;
+  }
+
+  button {
+    padding: 0.5em;
+    font-size: 0.9em;
+    color: #ffffff;
+    background-color: $primeColor;
+    border: none;
+    outline: none;
+  }
+
+}
+
+.profile {
+  padding: 5vh 3em 2em;
+  color: white;
+  background-color: $primeColor;
+
+  display: flex;
+
+  img {
+    height: 6em;
+    border-radius: 50%;
+    margin-right: 3em;
+  }
+
+  .text-block {
+
+    h1 {
+      font-size: 1.4em;
+      margin: 0;
+    }
+
+    p {
+      margin: 0.3em 0;
+      font-weight: normal;
+    }
+  }
+}
+
+.experience, .information {
+  padding: 1em 2em;
+
+  h2 {
+    margin: 0.4em 0;
+  }
+
+  h3, p {
+    margin: 0.3em 0;
+  }
+
+  h3 {
+    font-size: 1.05em;
+    font-weight: normal;
+  }
+
+  p {
+    padding-left: 2em;
+  }
+
+  .text-hide {
+    color: rgba(0, 0, 0, 0);
+  }
+
+  .value-table {
+    .item {
+      display: flex;
+      align-items: baseline;
+    }
+
+    .key {
+      min-width: 160px;
+    }
+  }
+}
+
+.footer-box {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.on-print {
+  display: none;
+}

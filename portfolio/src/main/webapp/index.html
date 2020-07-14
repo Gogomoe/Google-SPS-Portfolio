@@ -1,18 +1,117 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="UTF-8">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Chuan Jiang</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+    <link href="https://cdn.jsdelivr.net/npm/ant-design-icons/dist/anticons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
     <script src="script.js"></script>
-  </head>
-  <body>
-    <div id="content">
-      <h1>My Portfolio</h1>
-      <p>This is my portfolio.</p>
-      <p>Click here to get a random message:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
-      <div id="greeting-container"></div>
+</head>
+<body>
+
+<div class="landing">
+    <div class="content">
+        <h1>Gogo</h1>
+        <div class="link-icons">
+            <a href="https://gogo.moe/"><i class="fa fa-home"></i></a>
+            <a href="https://github.com/Gogomoe"><i class="ai ai-github"></i></a>
+            <a href="https://t.me/Gogomoe"><i class="fa fa-telegram"></i></a>
+            <a href="mailto:gogo81745.moe@gmail.com"><i class="ai ai-mail"></i></a>
+            <a href="https://keybase.io/gogomoe"><i class="ai ai-key"></i></a>
+        </div>
     </div>
-  </body>
+    <div class="down-arrow">
+        <i class="fa fa-chevron-down"></i>
+    </div>
+</div>
+<div class="resume-box">
+    <div class="resume">
+        <div class="profile">
+            <img src="https://static.gogo.moe/avatar.jpg" alt="Gogo's avatar">
+            <div class="text-block">
+                <h1>Chuan Jiang</h1>
+                <p>Born in Taizhou, Zhejiang in 1999. Interested in computer technology. Learning related knowledge
+                    since started programing. Currently interested in software engineering, computer graphics,
+                    programming language theory, functional programming and etc.</p>
+            </div>
+        </div>
+
+        <div class="experience">
+            <h2>Work Experience</h2>
+            <div class="text-block">
+                <h3>Southern University of Science and Technology · Students Assistant</h3>
+                <p>IIntroduce to Computer Programming A (2019 Spring、2019 Autumn)</p>
+            </div>
+        </div>
+
+        <div class="experience">
+            <h2>Project</h2>
+            <div class="text-block">
+
+                <h3>TUN on Dns (2019.12)</h3>
+                <p>Course project of Computer Network. A TUN and proxy based on DNS protocol</p>
+
+                <h3>SUSTech CS102A OfflineJudge (2019.3)</h3>
+                <p>An offline judger for CS102A. Focus on mistakes discovery and fixing automatically.</p>
+
+                <h3>YuyukoMod (2018.7)</h3>
+                <p>A MOD of the game Slay The Spire. Gain more than 20,000 downloads on Steam.</p>
+
+                <h3>Lang (2017.12)</h3>
+                <p>A simple interpreter for a try on learning compilers.</p>
+
+            </div>
+        </div>
+
+        <div class="experience">
+            <h2>Education</h2>
+            <div class="text-block">
+                <h3>Southern University of Science and Technology (2018.09 - )</h3>
+                <p>Computer Science and Engineering</p>
+            </div>
+        </div>
+
+        <div class="experience">
+            <h2>Competition</h2>
+            <div class="text-block">
+                <h3>ASC19 Student Supercomputer Challenge Preliminary Contest · The Second Class Prize (2019.03)</h3>
+                <h3>2018 SUSTech Programming Contest · The Third Class Honor (2018.12)</h3>
+                <h3>The 2nd SUSTech Programming Contest · The Third Class Honor (2019.12)</h3>
+            </div>
+        </div>
+
+        <div class="experience">
+            <h2>Stacks</h2>
+            <div class="text-block">
+                <h3>Java (2014)</h3>
+                <h3>Html, CSS, JavaScript (2016)</h3>
+                <h3>Kotlin (2017)</h3>
+                <h3>Python (2018)</h3>
+                <h3>Haskell (2019)</h3>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="comment-box">
+    <div class="comment-container">
+        <div class="experience">
+            <h2>Comments</h2>
+            <div id="comment-list" class="comment-list">
+                <div class="comment">
+                    some text
+                </div>
+            </div>
+            <div class="comment-input-box">
+                <label for="comment-input"></label>
+                <textarea name="comment" id="comment-input" placeholder="Enter comment"></textarea>
+                <button onclick="submitComment()">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
 </html>
